@@ -17,20 +17,13 @@ const useStyles = makeStyles((theme) => ({
 function Layout({ children }) {
   const classes = useStyles();
 
-  const logoutHandler = () => {
-    console.log("I am clicked");
-  };
-
   return (
     <div className={classes.root}>
       <AppBar position="static" elevation={0}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Rahul Lokurte Github Stats
+            Welcome to Github Stats
           </Typography>
-          <Button color="inherit" onClick={logoutHandler}>
-            Logout
-          </Button>
         </Toolbar>
       </AppBar>
       <SearchGithub />
