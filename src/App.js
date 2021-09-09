@@ -1,12 +1,5 @@
 import { createTheme } from "@material-ui/core";
-import {
-  blueGrey,
-  green,
-  orange,
-  pink,
-  purple,
-  yellow,
-} from "@material-ui/core/colors";
+import { green, pink } from "@material-ui/core/colors";
 import "./App.css";
 import Layout from "./components/layouts/Layout";
 import { ThemeProvider } from "@material-ui/styles";
