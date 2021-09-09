@@ -2,7 +2,6 @@ import React from "react";
 import { GithubContext } from "../../context/context";
 import styled from "styled-components";
 import { MdBusiness, MdLocationOn, MdLink } from "react-icons/md";
-import { LocationOn } from "@material-ui/icons";
 
 const Card = () => {
   const { githubUser } = React.useContext(GithubContext);
@@ -20,10 +19,7 @@ const Card = () => {
   return (
     <Wrapper>
       <header>
-        <img
-          src="https://avatars.githubusercontent.com/u/81438015?v=4"
-          alt={name}
-        />
+        <img src={avatar_url} alt={name} />
         <div>
           <h4>{name}</h4>
           <p>@{twitter_username}</p>
