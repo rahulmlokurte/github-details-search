@@ -21,7 +21,7 @@ function SearchGithub() {
   const classes = useStyles();
   const [gitHubUser, setgitHubUser] = useState();
   const [gitHubResponses, setgitHubResponses] = useState([]);
-  const { requests } = React.useContext(GithubContext);
+  const { requests, searchGithubUser } = React.useContext(GithubContext);
   const searchGitHubHandler = (event) => {
     setgitHubUser(event.target.value);
   };
@@ -30,6 +30,7 @@ function SearchGithub() {
     event.preventDefault();
     console.log(gitHubUser);
     if (gitHubUser) {
+      searchGithubUser(gitHubUser);
     }
   };
   return (
@@ -52,9 +53,9 @@ function SearchGithub() {
             Search
           </Button>
         )}
-
-        <h3>requests: {requests} / 60</h3>
       </form>
+
+      <div style={{ marginTop: 30 }}>requests: {requests} / 60</div>
       <GitHubCard githubcard={gitHubResponses} />
       <User />
     </Container>
