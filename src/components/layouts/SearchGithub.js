@@ -5,6 +5,7 @@ import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import GitHubCard from "./GitHubCard";
+import User from "./UserCard";
 
 const useStyles = makeStyles({
   field: {
@@ -51,6 +52,7 @@ function SearchGithub() {
         </Button>
       </form>
       <GitHubCard githubcard={gitHubResponses} />
+      <User />
     </Container>
   );
 }
